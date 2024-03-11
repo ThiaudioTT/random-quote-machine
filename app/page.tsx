@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+// import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Image from "next/image";
 
 export default function Home() {
@@ -7,9 +11,16 @@ export default function Home() {
         id="quote-box"
         className="bg-white p-8 rounded-lg shadow-lg text-black"
       >
-        <div className="quote">
-          <h1 id="text">I am the quote text</h1>
-          <p id="author">- Author</p>
+        <div className="quote-flexbox">
+          <p id="text" className="font-serif text-5xl italic text-center">
+            <FontAwesomeIcon icon={faQuoteLeft} className="w-8" />
+            I am the quote text
+            <FontAwesomeIcon icon={faQuoteRight} className="w-8 ml-auto" />
+          </p>
+
+          <p id="author" className="ml-auto text-right">
+            ~ Author
+          </p>
         </div>
 
         <div className="actions-footer">
@@ -17,11 +28,14 @@ export default function Home() {
             id="tweet-quote"
             className="btn"
             href="https://twitter.com/intent/tweet"
-            target="_blank">
+            target="_blank"
+          >
             Tweet quote
           </a>
 
-          <button id="new-quote" className="btn">New quote</button>
+          <button id="new-quote" className="btn">
+            New quote
+          </button>
         </div>
       </div>
     </main>
