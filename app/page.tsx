@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faShuffle } from "@fortawesome/free-solid-svg-icons";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
-// import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import Image from "next/image";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -23,18 +22,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="actions-footer">
+        <div className="actions-footer mt-8 flex justify-between">
           <a
             id="tweet-quote"
-            className="btn"
+            className="btn flex-item"
             href="https://twitter.com/intent/tweet"
             target="_blank"
           >
-            Tweet quote
+            <FontAwesomeIcon icon={faXTwitter} className="w-6"/>
           </a>
 
-          <button id="new-quote" className="btn">
-            New quote
+          <button id="new-quote" className="btn flex-item">
+            <FontAwesomeIcon icon={faShuffle} className="w-6"/>
           </button>
         </div>
       </div>
