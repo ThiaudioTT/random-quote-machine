@@ -45,7 +45,7 @@ export default function Home() {
           <div className="left-quote text-5xl">
             <FontAwesomeIcon icon={faQuoteLeft} className="w-8 text-right" />
           </div>
-          <div className="quote-content">
+          <div className="quote-content text-center">
             <p id="text" className="font-serif text-5xl italic">
               {quote.content}
             </p>
