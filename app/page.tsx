@@ -10,7 +10,23 @@ export default function Home() {
   const [quote, setQuote] = useState<IQuote>({ content: "I am a quote", author: "Author" });
 
   function getRandomQuote() {
-    setQuote({ content: "I am a new quote", author: "New Author" })
+    // setQuote({ content: "I am a new quote", author: "New Author" })
+
+    fetch("https://api.quotable.io/random").then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.json();
+    })
+    .then(data => {
+      const quote: IQuote = {
+        content: data.content,
+        author: data.author
+      }
+      setQuote(quote);
+    })
+    .catch(error => {
+      console.error("There was a problem fetching the quote", error);
+      window.alert("There was a problem fetching the quote");
+    })
   }
 
   return (
