@@ -62,7 +62,7 @@ export default function Home() {
           <a
             id="tweet-quote"
             className="btn flex-item ml-3"
-            href="https://twitter.com/intent/tweet"
+            href={`https://twitter.com/intent/tweet?text=${quote.content} - ${quote.author}`}
             target="_blank"
           >
             <FontAwesomeIcon icon={faXTwitter} size="2x" />
