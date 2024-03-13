@@ -3,15 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faShuffle } from "@fortawesome/free-solid-svg-icons";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
+import { useEffect, useState, Component } from "react";
 import { IQuote } from "./models/quote.interface";
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 export default function Home() {
   const [quote, setQuote] = useState<IQuote>({
-    content: "I am a quote",
-    author: "Author",
+    content: "",
+    author: "",
   });
+
+  useEffect(() => {
+    getRandomQuote();
+  }, []); // Empty array as dependency means it will only run once when component mounts
+
 
   function getRandomQuote() {
     // setQuote({ content: "I am a new quote", author: "New Author" })
@@ -34,7 +38,7 @@ export default function Home() {
       });
   }
 
-  return (
+  return quote.content ? ( // todo: Improve loading state
     <main className="flex min-h-screen flex-col items-center justify-center items-center p-24">
       <div
         id="quote-box"
@@ -78,5 +82,7 @@ export default function Home() {
         </div>
       </div>
     </main>
+  ) : (
+    <div>Loading...</div>
   );
 }
