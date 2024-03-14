@@ -43,7 +43,7 @@ export default function Home() {
       <div
         id="quote-box"
         className="bg-white p-8 rounded-lg shadow-lg text-black"
-        style={{maxWidth: "900px", minWidth: "300px"}}
+        style={{maxWidth: "900px", minWidth: "360px"}}
       >
         <div className="quote-flexbox">
           <div className="left-quote text-5xl">
