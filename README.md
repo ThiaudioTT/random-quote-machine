@@ -1,5 +1,10 @@
-https://github.com/lukePeavey/quotable
+# Random Quote Machine
 
+A web application that displays random quotes. The quotes are fetched from the [Quotable API](https://github.com/lukePeavey/quotable), my sincere thanks to the creator of the API.
+
+This website was created as a part of the [freeCodeCamp](https://www.freecodecamp.org/) Front End Libraries certification. You can check the user stories in the [userstories.md](./userstories.md) file.
+
+## About next.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -34,6 +39,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The website is being deployed on Vercel. Check the description in Github to access it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="https://cdn.donmai.us/sample/18/55/__hakurei_reimu_and_kochiya_sanae_touhou_drawn_by_suenari_peace__sample-18553ddf65870fdd7637c1e020e775df.jpg" width="360px">
+
