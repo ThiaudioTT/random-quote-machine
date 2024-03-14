@@ -43,21 +43,21 @@ export default function Home() {
       <div
         id="quote-box"
         className="bg-white p-8 rounded-lg shadow-lg text-black"
-        style={{maxWidth: "900px"}}
+        style={{maxWidth: "900px", minWidth: "300px"}}
       >
         <div className="quote-flexbox">
           <div className="left-quote text-5xl">
             <FontAwesomeIcon icon={faQuoteLeft} className="w-8 text-right" />
           </div>
           <div className="quote-content text-center">
-            <p id="text" className="font-serif text-5xl italic">
+            <p id="text" className="font-serif text-xl italic sm:text-5xl">
               {quote.content}
             </p>
           </div>
           <div className="right-quote text-right text-5xl">
             <FontAwesomeIcon icon={faQuoteRight} className="w-8 ml-auto" />
           </div>
-          <p id="author" className="ml-auto text-right">
+          <p id="author" className="ml-auto text-right text-sm sm:text-xl text-pretty">
             ~ {quote.author}
           </p>
         </div>
